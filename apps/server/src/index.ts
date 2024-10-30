@@ -7,6 +7,7 @@ async function init(){
     const httpServer = http.createServer()
     const port = process.env.PORT;
     socketService.io.attach(httpServer)
+    
     httpServer.listen(port,()=>{
         console.log(`Server is running at http://localhost:${port}`)
     })

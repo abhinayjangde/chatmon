@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SocketProvider from "../context/SocketProvider";
 
 export const metadata: Metadata = {
   title: "ChatMon",
@@ -13,9 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <SocketProvider>
+
       <body>
         {children}
       </body>
+      </SocketProvider>
     </html>
   );
 }
